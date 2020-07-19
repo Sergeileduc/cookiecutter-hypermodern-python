@@ -244,7 +244,7 @@ def xdoctest(session: Session) -> None:
     """Run examples with xdoctest."""
     args = session.posargs or ["all"]
     install_package(session)
-    install(session, "xdoctest")
+    install(session, "xdoctest[optional]")
     session.run("python", "-m", "xdoctest", package, *args)
 
 
